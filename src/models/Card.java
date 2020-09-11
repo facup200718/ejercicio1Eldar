@@ -3,16 +3,35 @@ package models;
 import java.util.Date;
 
 public class Card {
-    private String brand;
-    private int cardNumber;
+    public enum Brand{
+        VISA,AMEX,NARA
+    };
+    private Brand brand;
+    private double cardNumber;
     private String cardHolder;
-    private Date expirationDate;
+    private ExpirationDate expirationDate;
 
-    public void setBrand(String brand) {
+    public Card(Brand brand, double cardNumber, String cardHolder, Expiration expirationDate) {
         this.brand = brand;
+        this.cardNumber = cardNumber;
+        this.cardHolder = cardHolder;
+        this.expirationDate = expirationDate;
     }
 
+    public Brand getBrand() {
+        return brand;
+    }
 
+    public double getCardNumber() {
+        return cardNumber;
+    }
 
+    public String getCardHolder() {
+        return cardHolder;
+    }
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
 }
 
