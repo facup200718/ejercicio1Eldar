@@ -11,7 +11,7 @@ public class Card {
     private String cardHolder;
     private ExpirationDate expirationDate;
 
-    public Card(Brand brand, double cardNumber, String cardHolder, Expiration expirationDate) {
+    public Card(Brand brand, double cardNumber, String cardHolder, ExpirationDate expirationDate) {
         this.brand = brand;
         this.cardNumber = cardNumber;
         this.cardHolder = cardHolder;
@@ -30,7 +30,7 @@ public class Card {
         return cardHolder;
     }
 
-    public Date getExpirationDate() {
+    public ExpirationDate getExpirationDate() {
         return expirationDate;
     }
 }
