@@ -1,19 +1,29 @@
 package models;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class CreditCard {
     public enum Brand{
         VISA,AMEX,NARA
-    };
+    }
+
     private Brand brand;
     private String cardNumber;
     private String cardHolder;
-    private ExpirationDate expirationDate;
+    private LocalDate expirationDate;
 
-    public CreditCard(Brand brand, String cardNumber, String cardHolder, ExpirationDate expirationDate) {
+    public CreditCard(Brand brand, String cardNumber, String cardHolder, String expirationDate) {
         this.brand = brand;
         this.cardNumber = cardNumber;
         this.cardHolder = cardHolder;
-        this.expirationDate = expirationDate;
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String date = expirationDate;
+        this.expirationDate = LocalDate.parse(date, formatter);
     }
 
     public Brand getBrand() {
@@ -28,7 +38,8 @@ public class CreditCard {
         return cardHolder;
     }
 
-    public ExpirationDate getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
+
 }
