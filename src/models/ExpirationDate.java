@@ -8,4 +8,12 @@ public class ExpirationDate {
         this.month = month;
         this.year = year;
     }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
 }

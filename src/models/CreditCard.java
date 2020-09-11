@@ -1,8 +1,6 @@
 package models;
 
-import java.util.Date;
-
-public class Card {
+public class CreditCard {
     public enum Brand{
         VISA,AMEX,NARA
     };
@@ -11,7 +9,7 @@ public class Card {
     private String cardHolder;
     private ExpirationDate expirationDate;
 
-    public Card(Brand brand, double cardNumber, String cardHolder, ExpirationDate expirationDate) {
+    public CreditCard(Brand brand, double cardNumber, String cardHolder, ExpirationDate expirationDate) {
         this.brand = brand;
         this.cardNumber = cardNumber;
         this.cardHolder = cardHolder;
@@ -34,4 +32,3 @@ public class Card {
         return expirationDate;
     }
 }
-
