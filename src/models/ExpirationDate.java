@@ -1,19 +1,19 @@
 package models;
 
 public class ExpirationDate {
-    private int month;
-    private int year;
+    private String month;
+    private String year;
 
-    public ExpirationDate(int month, int year) {
+    public ExpirationDate(String month, String year) {
         this.month = month;
         this.year = year;
     }
 
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 }

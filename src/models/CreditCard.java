@@ -5,11 +5,11 @@ public class CreditCard {
         VISA,AMEX,NARA
     };
     private Brand brand;
-    private double cardNumber;
+    private String cardNumber;
     private String cardHolder;
     private ExpirationDate expirationDate;
 
-    public CreditCard(Brand brand, double cardNumber, String cardHolder, ExpirationDate expirationDate) {
+    public CreditCard(Brand brand, String cardNumber, String cardHolder, ExpirationDate expirationDate) {
         this.brand = brand;
         this.cardNumber = cardNumber;
         this.cardHolder = cardHolder;
@@ -20,7 +20,7 @@ public class CreditCard {
         return brand;
     }
 
-    public double getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
