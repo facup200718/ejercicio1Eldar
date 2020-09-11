@@ -2,12 +2,13 @@ package ui;
 
 import models.CreditCard;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static ui.UIShowCard.showCreditCardInfo;
 
 public class UIMainMenu {
-    public static void showMainMenu(CreditCard[] creditCard) {
+    public static void showMainMenu(ArrayList<CreditCard> creditCardList) {
         Scanner sc = new Scanner(System.in);
         int option;
 
@@ -19,7 +20,7 @@ public class UIMainMenu {
 
             switch (option) {
                 case 1:
-                    showCreditCardInfo(sc, creditCard);
+                    showCreditCardInfo(sc, creditCardList);
                     break;
                 case 2:
                     break;
