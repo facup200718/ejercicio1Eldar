@@ -1,4 +1,4 @@
-package ui;
+package services;
 
 import models.CreditCard;
 
@@ -10,8 +10,8 @@ public class UICompareCards {
         int i = 0;
         System.out.println("List of cards: ");
 
-        ArrayList<CreditCard> temporalList = new ArrayList<>();
-        temporalList = creditCardList;
+        ArrayList<CreditCard> temporalList = new ArrayList<>(creditCardList);
+
         CreditCard a = null;
         CreditCard b = null;
 

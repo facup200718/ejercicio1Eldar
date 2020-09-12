@@ -5,10 +5,10 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static ui.UICompareCards.compareCards;
+import static services.UICompareCards.compareCards;
 import static ui.UIShowCard.showCreditCardInfo;
-import static ui.UIValidateTransaction.validateTransaction;
-import static ui.UIValidateCard.validateCard;
+import static services.UIValidateTransaction.validateTransaction;
+import static services.UIValidateCard.validateCard;
 
 public class UIMainMenu {
     public static void showMainMenu(ArrayList<CreditCard> creditCardList) {
@@ -41,6 +41,6 @@ public class UIMainMenu {
                 case 5:
                     break;
             }
-        } while(option != 4);
+        } while(option >= 1 && option <= 4);
     }
 }
