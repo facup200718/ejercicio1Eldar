@@ -25,15 +25,7 @@ public class UICompareCards {
 
         int answer = sc.nextInt();
         a = temporalList.get(answer-1);
-        
-        i = 0;
-
-        for (CreditCard c : temporalList) {
-            i++;
-            if (i == answer) {
-                temporalList.remove(c);
-            }
-        }
+        temporalList.remove(answer-1);
 
         i = 0;
 
@@ -43,5 +35,15 @@ public class UICompareCards {
         }
 
         System.out.println("Select another card");
+
+        answer = sc.nextInt();
+        b = temporalList.get(answer-1);
+        temporalList.remove(answer-1);
+
+        if (!a.getCardNumber().equals(b.getCardNumber())) {
+            System.out.println("Cards are different");
+        } else {
+            System.out.println("Cards are the same, maybe it has been cloned");
+        }
     }
 }
