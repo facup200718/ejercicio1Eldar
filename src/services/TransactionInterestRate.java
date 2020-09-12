@@ -1,5 +1,6 @@
 package services;
 
+import models.Brand;
 import models.CreditCard;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,14 +18,14 @@ public class TransactionInterestRate {
         if (transactionValidation(amount) == true) {
             System.out.println("Type in your brand\n");
 
-            for (CreditCard.Brand brand:CreditCard.Brand.values()) {
+            for (Brand brand:Brand.values()) {
                 System.out.println(brand);
             }
 
             String answer = sc.next();
             String foundBrand = null;
 
-            for (CreditCard.Brand brand:CreditCard.Brand.values()) {
+            for (Brand brand:Brand.values()) {
                 if (answer.equals(brand.toString())) {
                     foundBrand = brand.toString();
                     rates(foundBrand, amount);
