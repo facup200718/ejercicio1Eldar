@@ -5,7 +5,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static utils.Utils.integerValidation;
+import static utils.Utils.leadingZeros;
+import static utils.Utils.time;
 
 public class ValidateCard {
     public static void validateCard(Scanner sc, ArrayList<CreditCard> creditCardList) {
@@ -15,8 +16,7 @@ public class ValidateCard {
         String number;
 
         do {
-            number = String.valueOf(integerValidation(sc));
-            System.out.println(number);
+            number = leadingZeros(sc);
 
             if (number.length() != 16) {
                 System.out.println("Your credit card number must be 16 digits long");
@@ -30,9 +30,9 @@ public class ValidateCard {
         }
 
         if (foundCreditCard == null) {
-            System.out.println("Wrong card number\n");
+            System.out.println("\nWrong card number\n");
         } else {
-            System.out.println("Card found\n");
+            System.out.println("\nCard found");
             LocalDate todayDate = LocalDate.now();
 
             if (todayDate.isBefore(foundCreditCard.getExpirationDate())) {
@@ -41,5 +41,6 @@ public class ValidateCard {
                 System.out.println("Your card has expired\n");
             }
         }
+        time();
     }
 }

@@ -4,8 +4,10 @@ import models.CreditCard;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
-import static utils.Utils.integerValidation;
+import static utils.Utils.leadingZeros;
+import static utils.Utils.time;
 
 public class ShowCard {
     public static void showCreditCardInfo(Scanner sc, ArrayList<CreditCard> creditCardList) {
@@ -16,8 +18,7 @@ public class ShowCard {
         String number;
 
         do {
-            number = String.valueOf(integerValidation(sc));
-            System.out.println(number);
+            number = leadingZeros(sc);
 
             if (number.length() != 16) {
                 System.out.println("Your credit card number must be 16 digits long");
@@ -38,6 +39,8 @@ public class ShowCard {
             System.out.println("Card holder: " + foundCreditCard.getCardHolder());
             System.out.println("Date of expiration: " + foundCreditCard.getExpirationDate().getMonth() + "/"
                     + foundCreditCard.getExpirationDate().getYear() + "\n");
+
         }
+        time();
     }
 }

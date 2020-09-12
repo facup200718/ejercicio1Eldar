@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static utils.Utils.integerValidation;
+import static utils.Utils.time;
 
 public class CompareCards {
     public static void compareCards(Scanner sc, ArrayList<CreditCard> creditCardList) {
@@ -36,6 +37,8 @@ public class CompareCards {
         a = temporalList.get(answer-1);
         temporalList.remove(answer-1);
 
+        time();
+
         i = 0;
 
         for (CreditCard c : temporalList) {
@@ -60,5 +63,7 @@ public class CompareCards {
         } else {
             System.out.println("Cards are the same, maybe one has been cloned\n");
         }
+
+        time();
     }
 }

@@ -51,5 +51,28 @@ public class Utils {
         return floatNumber;
     }
 
+    public static String leadingZeros (Scanner sc) {
+        String number = null;
+        boolean isNumber = false;
 
+        while (!isNumber) {
+            try {
+                number = sc.next();
+                Long lNumber = Long.valueOf(number); //Si ingresamos algo que no es un entero salta al catch
+                isNumber = true;
+            } catch (Exception e) {
+                System.out.println("Please write a number");
+            }
+        }
+        return number;
+    }
+
+    public static void time() {
+        try {
+            Thread.sleep(1000);
+        }
+        catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+    }
 }

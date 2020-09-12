@@ -3,6 +3,7 @@ package services;
 import java.util.Scanner;
 
 import static utils.Utils.floatValidation;
+import static utils.Utils.time;
 
 public class ValidateTransaction {
     public static void validateTransaction(Scanner sc) {
@@ -20,6 +21,8 @@ public class ValidateTransaction {
             System.out.println("Invalid transaction\n");
             result = false;
         }
+
+        time();
         return result;
     }
 }

@@ -1,14 +1,13 @@
 package services;
 
 import models.CreditCard;
-
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
 import static services.ValidateTransaction.transactionValidation;
 import static utils.Utils.floatValidation;
+import static utils.Utils.time;
 
 public class TransactionInterestRate {
     public static void calculateInterestRate(Scanner sc) {
@@ -71,6 +70,10 @@ public class TransactionInterestRate {
         amount = (amount / 100) * ratePercentage;
         str = String.format("%.02f", amount);
         System.out.println("The interest rate for the transaction is $" + str + "\n");
+
+        time();
+        time();
+
     }
 
     public static float rateLimits (float ratePercentage) {

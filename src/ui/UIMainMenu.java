@@ -25,7 +25,6 @@ public class UIMainMenu {
             System.out.println("5) Transaction rate");
             System.out.println("6) Exit \n");
 
-
             do {
                 option = (int) (integerValidation(sc));
                 if (option < 1 || option > 6) {
