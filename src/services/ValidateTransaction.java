@@ -2,10 +2,12 @@ package services;
 
 import java.util.Scanner;
 
+import static utils.Utils.floatValidation;
+
 public class ValidateTransaction {
     public static void validateTransaction(Scanner sc) {
         System.out.println("Type in the transaction amount: \n");
-        float amount = sc.nextFloat();
+        float amount = floatValidation(sc);
         transactionValidation(amount);
     }
 

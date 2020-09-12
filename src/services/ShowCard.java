@@ -5,13 +5,24 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static utils.Utils.integerValidation;
+
 public class ShowCard {
     public static void showCreditCardInfo(Scanner sc, ArrayList<CreditCard> creditCardList) {
 
         CreditCard foundCreditCard = null;
 
         System.out.println("Write your credit card number: \n");
-        String number = sc.next();
+        String number;
+
+        do {
+            number = String.valueOf(integerValidation(sc));
+            System.out.println(number);
+
+            if (number.length() != 16) {
+                System.out.println("Your credit card number must be 16 digits long");
+            }
+        } while (number.length() != 16);
 
         for (CreditCard c : creditCardList) {
             if (c.getCardNumber().equals(number)) {

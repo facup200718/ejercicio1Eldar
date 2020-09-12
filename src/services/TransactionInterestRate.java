@@ -8,11 +8,12 @@ import java.util.Date;
 import java.util.Scanner;
 
 import static services.ValidateTransaction.transactionValidation;
+import static utils.Utils.floatValidation;
 
 public class TransactionInterestRate {
     public static void calculateInterestRate(Scanner sc) {
         System.out.println("Type in the transaction amount: \n");
-        float amount = sc.nextFloat();
+        float amount = floatValidation(sc);
 
         if (transactionValidation(amount) == true) {
             System.out.println("Type in your brand\n");

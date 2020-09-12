@@ -4,22 +4,51 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Utils {
-    public static int optionVerification(Scanner sc) {
-        int option = 0;
+    public static long integerValidation(Scanner sc) {
+        long integer = 0;
         boolean isNumber = false;
 
-        while (isNumber == false) {
+        while (!isNumber) {
             try {
-                option = Integer.parseInt(sc.nextLine());
+                String lengthTest;
+                do {
+                    lengthTest = sc.nextLine(); //Con InputMismatchException loopeaba infinitamente
+                    if (lengthTest.length() > 16) {
+                        System.out.println("Please write a shorter value");
+                    }
+                } while(lengthTest.length() > 16);
+
+                integer = Long.valueOf(lengthTest);
                 isNumber = true;
             } catch(NumberFormatException e){
                 System.out.println("Please write an integer number");
             }
         }
 
+        return integer;
+    }
 
+    public static float floatValidation(Scanner sc) {
+        float floatNumber = 0;
+        boolean isNumber = false;
+        while (!isNumber) {
+            try {
+                String lengthTest;
+                do {
+                    lengthTest = sc.nextLine(); //Con InputMismatchException loopeaba infinitamente
+                    if (lengthTest.length() > 16) {
+                        System.out.println("Please write a shorter value");
+                    }
+                } while(lengthTest.length() > 16);
 
-        return option;
+                floatNumber = Float.valueOf(lengthTest);
+                isNumber = true;
+            } catch(NumberFormatException e) {
+                System.out.println("Please write a number");
+            }
+        }
+
+        return floatNumber;
     }
 
 

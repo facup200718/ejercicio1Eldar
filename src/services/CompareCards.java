@@ -5,6 +5,8 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static utils.Utils.integerValidation;
+
 public class CompareCards {
     public static void compareCards(Scanner sc, ArrayList<CreditCard> creditCardList) {
         int i = 0;
@@ -22,7 +24,15 @@ public class CompareCards {
 
         System.out.println("\nSelect a card (Type in 1, 2, 3...)\n");
 
-        int answer = sc.nextInt();
+        int answer;
+
+        do {
+            answer = (int) (integerValidation(sc));
+            if (answer < 1 || answer > temporalList.size()) {
+                System.out.println("Please select an existing option");
+            }
+        } while (answer < 1 || answer > temporalList.size());
+
         a = temporalList.get(answer-1);
         temporalList.remove(answer-1);
 
@@ -35,14 +45,20 @@ public class CompareCards {
 
         System.out.println("\nSelect another card\n");
 
-        answer = sc.nextInt();
+        do {
+            answer = (int) (integerValidation(sc));
+            if (answer < 1 || answer > temporalList.size()) {
+                System.out.println("Please select an existing option");
+            }
+        } while (answer < 1 || answer > temporalList.size());
+
         b = temporalList.get(answer-1);
         temporalList.remove(answer-1);
 
         if (!a.getCardNumber().equals(b.getCardNumber())) {
             System.out.println("Cards are different\n");
         } else {
-            System.out.println("Cards are the same, maybe it has been cloned\n");
+            System.out.println("Cards are the same, maybe one has been cloned\n");
         }
     }
 }

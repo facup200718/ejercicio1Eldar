@@ -5,7 +5,7 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static utils.Utils.optionVerification;
+import static utils.Utils.integerValidation;
 import static services.CompareCards.compareCards;
 import static services.ShowCard.showCreditCardInfo;
 import static services.TransactionInterestRate.calculateInterestRate;
@@ -27,7 +27,7 @@ public class UIMainMenu {
 
 
             do {
-                option = optionVerification(sc);
+                option = (int) (integerValidation(sc));
                 if (option < 1 || option > 6) {
                     System.out.println("Please select an existing option");
                 }
