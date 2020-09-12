@@ -5,6 +5,7 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static ui.UICompareCards.compareCards;
 import static ui.UIShowCard.showCreditCardInfo;
 import static ui.UIValidateTransaction.validateTransaction;
 import static ui.UIValidateCard.validateCard;
@@ -16,9 +17,10 @@ public class UIMainMenu {
 
         do {
             System.out.println("1) Show credit card info");
-            System.out.println("2) Validate Transaction");
-            System.out.println("3) Validate Card");
-            System.out.println("4) Exit");
+            System.out.println("2) Validate transaction");
+            System.out.println("3) Validate card");
+            System.out.println("4) Compare cards");
+            System.out.println("5) Exit");
             System.out.println();
 
             option = sc.nextInt();
@@ -34,6 +36,9 @@ public class UIMainMenu {
                     validateCard(sc, creditCardList);
                     break;
                 case 4:
+                    compareCards(sc, creditCardList);
+                    break;
+                case 5:
                     break;
             }
         } while(option != 4);
