@@ -11,9 +11,10 @@ import static utils.Utils.floatValidation;
 import static utils.Utils.time;
 
 public class TransactionInterestRate {
-    public static void calculateInterestRate(Scanner sc) {
+    public static void calculateInterestRate() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Type in the transaction amount: \n");
-        float amount = floatValidation(sc);
+        float amount = floatValidation();
 
         if (transactionValidation(amount) == true) {
             System.out.println("Type in your brand\n");

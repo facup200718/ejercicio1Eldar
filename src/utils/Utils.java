@@ -4,7 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Utils {
-    public static long integerValidation(Scanner sc) {
+    public static long integerValidation() {
+        Scanner sc = new Scanner(System.in);
         long integer = 0;
         boolean isNumber = false;
 
@@ -28,7 +29,8 @@ public class Utils {
         return integer;
     }
 
-    public static float floatValidation(Scanner sc) {
+    public static float floatValidation() {
+        Scanner sc = new Scanner(System.in);
         float floatNumber = 0;
         boolean isNumber = false;
         while (!isNumber) {
@@ -51,7 +53,8 @@ public class Utils {
         return floatNumber;
     }
 
-    public static String leadingZeros (Scanner sc) {
+    public static String leadingZeros () {
+        Scanner sc = new Scanner(System.in);
         String number = null;
         boolean isNumber = false;
 

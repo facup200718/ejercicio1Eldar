@@ -14,7 +14,6 @@ import static services.ValidateCard.validateCard;
 
 public class UIMainMenu {
     public static void showMainMenu(ArrayList<CreditCard> creditCardList) {
-        Scanner sc = new Scanner(System.in);
         int option;
 
         do {
@@ -26,7 +25,7 @@ public class UIMainMenu {
             System.out.println("6) Exit \n");
 
             do {
-                option = (int) (integerValidation(sc));
+                option = (int) (integerValidation());
                 if (option < 1 || option > 6) {
                     System.out.println("Please select an existing option");
                 }
@@ -34,19 +33,19 @@ public class UIMainMenu {
 
             switch (option) {
                 case 1:
-                    showCreditCardInfo(sc, creditCardList);
+                    showCreditCardInfo(creditCardList);
                     break;
                 case 2:
-                    validateTransaction(sc);
+                    validateTransaction();
                     break;
                 case 3:
-                    validateCard(sc, creditCardList);
+                    validateCard(creditCardList);
                     break;
                 case 4:
-                    compareCards(sc, creditCardList);
+                    compareCards(creditCardList);
                     break;
                 case 5:
-                    calculateInterestRate(sc);
+                    calculateInterestRate();
                     break;
                 case 6:
                     break;

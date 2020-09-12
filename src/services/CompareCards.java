@@ -9,7 +9,8 @@ import static utils.Utils.integerValidation;
 import static utils.Utils.time;
 
 public class CompareCards {
-    public static void compareCards(Scanner sc, ArrayList<CreditCard> creditCardList) {
+    public static void compareCards(ArrayList<CreditCard> creditCardList) {
+        Scanner sc = new Scanner(System.in);
         int i = 0;
         System.out.println("List of cards: \n");
 
@@ -28,7 +29,7 @@ public class CompareCards {
         int answer;
 
         do {
-            answer = (int) (integerValidation(sc));
+            answer = (int) (integerValidation());
             if (answer < 1 || answer > temporalList.size()) {
                 System.out.println("Please select an existing option");
             }
@@ -49,7 +50,7 @@ public class CompareCards {
         System.out.println("\nSelect another card\n");
 
         do {
-            answer = (int) (integerValidation(sc));
+            answer = (int) (integerValidation());
             if (answer < 1 || answer > temporalList.size()) {
                 System.out.println("Please select an existing option");
             }

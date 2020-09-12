@@ -1,14 +1,13 @@
 package services;
 
-import java.util.Scanner;
 
 import static utils.Utils.floatValidation;
 import static utils.Utils.time;
 
 public class ValidateTransaction {
-    public static void validateTransaction(Scanner sc) {
+    public static void validateTransaction() {
         System.out.println("Type in the transaction amount: \n");
-        float amount = floatValidation(sc);
+        float amount = floatValidation();
         transactionValidation(amount);
     }
 

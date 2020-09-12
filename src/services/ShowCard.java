@@ -3,22 +3,19 @@ package services;
 import models.CreditCard;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 import static utils.Utils.leadingZeros;
 import static utils.Utils.time;
 
 public class ShowCard {
-    public static void showCreditCardInfo(Scanner sc, ArrayList<CreditCard> creditCardList) {
-
+    public static void showCreditCardInfo(ArrayList<CreditCard> creditCardList) {
         CreditCard foundCreditCard = null;
 
         System.out.println("Write your credit card number: \n");
         String number;
 
         do {
-            number = leadingZeros(sc);
+            number = leadingZeros();
 
             if (number.length() != 16) {
                 System.out.println("Your credit card number must be 16 digits long");
