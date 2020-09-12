@@ -3,7 +3,6 @@ package ui;
 import models.CreditCard;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import static utils.Utils.integerValidation;
 import static services.CompareCards.compareCards;
