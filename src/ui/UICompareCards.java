@@ -25,6 +25,8 @@ public class UICompareCards {
 
         int answer = sc.nextInt();
         a = temporalList.get(answer-1);
+        
+        i = 0;
 
         for (CreditCard c : temporalList) {
             i++;
