@@ -23,7 +23,7 @@ public class CompareCards {
             System.out.println(i + ") XXXX XXXX XXXX " + c.getCardNumber().substring(c.getCardNumber().length() - 4));
         }
 
-        System.out.println("\nSelect a card (Type in 1, 2, 3...)\n");
+        System.out.println("\nSelect a card\n");
 
         int answer;
 
@@ -61,7 +61,7 @@ public class CompareCards {
         if (!a.getCardNumber().equals(b.getCardNumber())) {
             System.out.println("Cards are different\n");
         } else {
-            System.out.println("Cards are the same, maybe one has been cloned\n");
+            System.out.println("Cards are the same\n");
         }
 
         time();

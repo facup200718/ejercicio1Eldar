@@ -4,9 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class CreditCard {
-    public enum Brand{
-        VISA,AMEX,NARA
-    }
 
     private Brand brand;
     private String cardNumber;
