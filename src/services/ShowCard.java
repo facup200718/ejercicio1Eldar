@@ -27,7 +27,6 @@ public class ShowCard {
             System.out.println("Card holder: " + foundCreditCard.getCardHolder());
             System.out.println("Date of expiration: " + foundCreditCard.getExpirationDate().getMonth() + "/"
                     + foundCreditCard.getExpirationDate().getYear() + "\n");
-            System.out.println();
         }
     }
 }

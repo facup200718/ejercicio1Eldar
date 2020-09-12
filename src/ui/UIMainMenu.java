@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import static services.CompareCards.compareCards;
 import static services.ShowCard.showCreditCardInfo;
+import static services.TransactionInterestRate.calculateInterestRate;
 import static services.ValidateTransaction.validateTransaction;
 import static services.ValidateCard.validateCard;
 
@@ -20,7 +21,8 @@ public class UIMainMenu {
             System.out.println("2) Validate transaction");
             System.out.println("3) Validate card");
             System.out.println("4) Compare cards");
-            System.out.println("5) Exit \n");
+            System.out.println("5) Transaction rate");
+            System.out.println("6) Exit \n");
 
             option = sc.nextInt();
 
@@ -38,8 +40,11 @@ public class UIMainMenu {
                     compareCards(sc, creditCardList);
                     break;
                 case 5:
+                    calculateInterestRate(sc);
+                    break;
+                case 6:
                     break;
             }
-        } while(option >= 1 && option <= 4);
+        } while(option >= 1 && option <= 5);
     }
 }
