@@ -1,11 +1,8 @@
 package services;
 
-import models.CreditCard;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UIValidateTransaction {
+public class ValidateTransaction {
     public static void validateTransaction(Scanner sc) {
         System.out.println("Type in the transaction amount: \n");
         float monto = sc.nextFloat();

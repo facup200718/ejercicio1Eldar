@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UIValidateCard {
+public class ValidateCard {
     public static void validateCard(Scanner sc, ArrayList<CreditCard> creditCardList) {
         CreditCard foundCreditCard = null;
 

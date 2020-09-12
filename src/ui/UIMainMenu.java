@@ -5,10 +5,10 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static services.UICompareCards.compareCards;
-import static ui.UIShowCard.showCreditCardInfo;
-import static services.UIValidateTransaction.validateTransaction;
-import static services.UIValidateCard.validateCard;
+import static services.CompareCards.compareCards;
+import static services.ShowCard.showCreditCardInfo;
+import static services.ValidateTransaction.validateTransaction;
+import static services.ValidateCard.validateCard;
 
 public class UIMainMenu {
     public static void showMainMenu(ArrayList<CreditCard> creditCardList) {

@@ -5,7 +5,7 @@ import models.CreditCard;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UICompareCards {
+public class CompareCards {
     public static void compareCards(Scanner sc, ArrayList<CreditCard> creditCardList) {
         int i = 0;
         System.out.println("List of cards: \n");

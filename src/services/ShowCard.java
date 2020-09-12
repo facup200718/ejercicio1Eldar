@@ -1,11 +1,11 @@
-package ui;
+package services;
 
 import models.CreditCard;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UIShowCard {
+public class ShowCard {
     public static void showCreditCardInfo(Scanner sc, ArrayList<CreditCard> creditCardList) {
 
         CreditCard foundCreditCard = null;
