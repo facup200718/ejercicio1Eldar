@@ -19,19 +19,15 @@ public class UIValidateCard {
         }
 
         if (foundCreditCard == null) {
-            System.out.println("Wrong card number");
-            System.out.println();
+            System.out.println("Wrong card number\n");
         } else {
-            System.out.println("Card found");
-            System.out.println();
+            System.out.println("Card found\n");
             LocalDate todayDate = LocalDate.now();
 
             if (todayDate.isBefore(foundCreditCard.getExpirationDate())) {
-                System.out.println("Valid card");
-                System.out.println();
-            } else if (todayDate.isAfter(foundCreditCard.getExpirationDate()) || todayDate.isEqual(foundCreditCard.getExpirationDate())) {
-                System.out.println("Your card has expired");
-                System.out.println();
+                System.out.println("Valid card\n");
+            } else {
+                System.out.println("Your card has expired\n");
             }
         }
     }

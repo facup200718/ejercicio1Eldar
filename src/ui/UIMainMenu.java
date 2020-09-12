@@ -20,8 +20,7 @@ public class UIMainMenu {
             System.out.println("2) Validate transaction");
             System.out.println("3) Validate card");
             System.out.println("4) Compare cards");
-            System.out.println("5) Exit");
-            System.out.println();
+            System.out.println("5) Exit \n");
 
             option = sc.nextInt();
 

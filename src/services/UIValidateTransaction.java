@@ -7,15 +7,13 @@ import java.util.Scanner;
 
 public class UIValidateTransaction {
     public static void validateTransaction(Scanner sc) {
-        System.out.println("Type in the transaction amount: ");
+        System.out.println("Type in the transaction amount: \n");
         float monto = sc.nextFloat();
 
         if (monto > 0 && monto < 1000) {
-            System.out.println("Valid transaction");
-            System.out.println();
+            System.out.println("\nValid transaction\n");
         } else {
-            System.out.println("Invalid transaction");
-            System.out.println();
+            System.out.println("Invalid transaction\n");
         }
     }
 }

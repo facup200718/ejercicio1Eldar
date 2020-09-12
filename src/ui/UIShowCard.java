@@ -10,7 +10,7 @@ public class UIShowCard {
 
         CreditCard foundCreditCard = null;
 
-        System.out.println("Write your credit card number: ");
+        System.out.println("Write your credit card number: \n");
         String number = sc.next();
 
         for (CreditCard c : creditCardList) {
@@ -20,12 +20,13 @@ public class UIShowCard {
         }
 
         if (foundCreditCard == null) {
-            System.out.println("Wrong card number");
+            System.out.println("\nWrong card number\n");
         } else {
             System.out.println("Brand: " + foundCreditCard.getBrand());
             System.out.println("Card number: " + number);
             System.out.println("Card holder: " + foundCreditCard.getCardHolder());
-            System.out.println("Date of expiration: " + foundCreditCard.getExpirationDate().getMonth() + "/" + foundCreditCard.getExpirationDate().getYear());
+            System.out.println("Date of expiration: " + foundCreditCard.getExpirationDate().getMonth() + "/"
+                    + foundCreditCard.getExpirationDate().getYear() + "\n");
             System.out.println();
         }
     }
